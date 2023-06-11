@@ -42,6 +42,11 @@ public class ExamRestController {
 	@Autowired
 	CliniqueRepository cliniqueRepository;
 
+	@RequestMapping(value ="/hello")
+	public String sayHello() {
+		return "Hello World" ;
+	}
+	
 	//http://localhost:9090/rest/add-clinique
 	@PostMapping("/add-clinique")
 	public Clinique addClinique (@RequestBody Clinique clinique) {
